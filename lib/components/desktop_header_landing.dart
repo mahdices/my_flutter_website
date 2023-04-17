@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:my_site/components/my_site_scaffold.dart';
 import 'package:my_site/custom_clip.dart';
+import 'package:my_site/main.dart';
 import 'package:my_site/shape.dart';
 import 'package:my_site/styles/styles.dart';
 
 class DesktopHeaderLanding extends StatelessWidget {
   DesktopHeaderLanding({super.key});
 
-  late AppStyle appStyle;
-
   @override
   Widget build(BuildContext context) {
-    appStyle = AppStyle(context);
     return Container(
       height: 700,
       padding: EdgeInsets.only(left: 150, right: 45),
@@ -25,7 +24,7 @@ class DesktopHeaderLanding extends StatelessWidget {
             children: [
               Text(
                 "Mahdi Mirzadeh,\nMobile\nDeveloper.",
-                style: appStyle.text.h1,
+                style: $style.text.h1,
               ),
               SizedBox(
                 height: 16,
